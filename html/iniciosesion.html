@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Tour - Iniciar Sesión</title>
+    <link rel="stylesheet" href="iniciosesion.css"> 
+</head>
+<body>
+
+    <main class="login-container">
+        
+        <div class="logo-container">
+            <img src="./imagenes/logo.png" alt="Logo American Tour" class="main-logo">
+        </div>
+
+        <h1 class="page-title">Inicia sesión</h1>
+
+        <form class="login-form" method="post">
+            
+            <div class="inputs-column">
+                <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+            </div>
+
+            <button type="button" class="submit-button" onclick="location.href='inicio.html'">
+                <img src="./imagenes/circulo-de-flecha_1.ico" alt="Entrar">
+            </button>
+
+        </form>
+
+        <div class="register-link">
+            <p>¿No tienes una cuenta? <a href="./registrarse.html">Regístrate aquí</a></p>
+        </div>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>American Tour S.A.S Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

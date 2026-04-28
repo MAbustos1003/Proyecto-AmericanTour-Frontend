@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Tour - Mis Reservas</title>
+    <link rel="stylesheet" href="misreservas.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="logo-header">
+            <img src="./imagenes/logo.png" alt="American Tour Logo">
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">Tus reservas</h1>
+
+        <div class="reservations-table">
+            <div class="table-header">
+                <div class="header-item">FECHA Y HORA</div>
+                <div class="header-item">DESCRIPCIÓN</div>
+            </div>
+
+            <div class="table-row">
+                <div class="row-index">1</div>
+                <div class="col-datetime">
+                    <p><strong>DIA:</strong> MARTES 10 DE OCTUBRE</p>
+                    <p><strong>HORA:</strong> 2:15 PM</p>
+                </div>
+                <div class="col-description">
+                    <div class="desc-grid">
+                        <p><strong>Numero de asiento:</strong> #15</p>
+                        <p><strong>Tipo de vehiculo:</strong> Buseta</p>
+                        <p><strong>Lugar de salida:</strong> Bogotá</p>
+                        <p><strong>Número de tiket:</strong> 014</p>
+                        <p><strong>Número de viaje:</strong> 000053271295</p>
+                        <p><strong>Lugar de llegada:</strong> Medellín</p>
+                    </div>
+
+                </div>
+
+                <div class="action-container">
+                    <button class="btn-ver-mas">Ver<br>mas</button>
+                    <a class="submit-button"></a>
+                </div>
+
+            <div class="table-row empty-row">
+                <div class="row-index">1</div>
+                <div class="col-datetime"></div>
+                <div class="col-description"></div>
+            </div>
+
+            <div class="table-row empty-row">
+                <div class="row-index">2</div>
+                <div class="col-datetime"></div>
+                <div class="col-description"></div>
+            </div>
+
+            <div class="table-row empty-row">
+                <div class="row-index">3</div>
+                <div class="col-datetime"></div>
+                <div class="col-description"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-simple">
+        <p>American Tour S.A.S Todos los derechos reservados</p>
+    </footer>
+
+    <div class="modal-overlay" id="detailsModal">
+    
+    <div class="modal-content">
+        
+        <button class="modal-close" id="closeModal">
+            &lt;
+        </button>
+
+        <h1 class="modal-title">DETALLES DE LA RESERVA</h1>
+
+        <div class="reservation-details-list">
+            <p>1. <strong>Nombre del usuario:</strong> Carlos Olarte Gonzales</p>
+            <p>2. <strong>Numero de identificación:</strong> 11547893</p>
+            <p>3. <strong>Numero de reserva:</strong> 1225578763</p>
+            <p>4. <strong>Lugar de salida:</strong> Bogotá-Centro de transporte San Luis</p>
+            <p>5. <strong>Lugar de llegada:</strong> Medellin-Terminal el Poblado</p>
+            <p>6. <strong>Número de asiento:</strong> 014</p>
+            <p>7. <strong>Tipo de vehículo:</strong> Buseta</p>
+            <p>8. <strong>Número de buseta:</strong> 6548</p>
+            <p>9. <strong>Nombre del conductor:</strong> Fabian Ortego Gonzales</p>
+            <p>10. <strong>Equipaje:</strong> 2 Piezas</p>
+            <p>11. <strong>Refrigerio:</strong> # 1</p>
+        </div>
+
+        <img src="./imagenes/logo.ico" alt="American Tour Logo" class="modal-logo">
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('detailsModal');
+    const closeBtn = document.getElementById('closeModal');
+    const openBtns = document.querySelectorAll('.btn-ver-mas');
+
+    
+    function abrirModal() {
+        modal.classList.add('active');
+    }
+
+    function cerrarModal() {
+        modal.classList.remove('active');
+    }
+
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', abrirModal);
+    });
+
+    closeBtn.addEventListener('click', cerrarModal);
+
+</script>
+
+</body>
+</html>

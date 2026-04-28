@@ -1,0 +1,134 @@
+:root {
+    --color-fondo: #D9F2D9; 
+    --color-primario: #2D8A4E; 
+    --color-texto-input: #666666; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+
+.logo-container {
+    margin-bottom: 2rem;
+    width: 250px; 
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+}
+
+
+.page-title {
+    color: var(--color-primario);
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+
+
+.login-form {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.inputs-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    flex: 1; 
+}
+
+.inputs-column input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-texto-input);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.inputs-column input::placeholder {
+    color: var(--color-texto-input);
+}
+
+.inputs-column input:focus {
+    outline: 2px solid var(--color-primario); 
+}
+
+
+.submit-button {
+    background-color: var(--color-primario);
+    border: none;
+    border-radius: 50%; 
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+}
+
+.submit-button img {
+    width: 30px; 
+    height: auto;
+}
+
+
+.register-link {
+    font-size: 0.85rem;
+    color: var(--color-primario);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.register-link a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.page-footer {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 0.7rem;
+    color: #000;
+    font-weight: bold;
+}

@@ -1,0 +1,137 @@
+:root {
+    --verde-fondo: #D5EFC9;
+    --verde-oscuro: #148826; 
+    --verde-footer: #4E9A57; 
+    --fuente: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--verde-fondo);
+    font-family: var(--fuente);
+    color: #000;
+    overflow-x: hidden;
+}
+
+
+.header-logo {
+    padding: 20px;
+    width: 100%;
+}
+
+.mini-logo {
+    width: 200px;
+}
+
+
+.watermark-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 150px 40px; 
+    text-align: center;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: var(--verde-oscuro);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.info-column p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+
+.footer-nosotros {
+    width: 100%;
+    background-color: transparent;
+}
+
+.copyright-text {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quality-policy-bar {
+    background-color: var(--verde-footer);
+    color: white;
+    display: flex;
+    padding: 20px 10%;
+    align-items: center;
+}
+
+.policy-title h3 {
+    font-size: 1.5rem;
+    border-right: 2px solid white;
+    padding-right: 30px;
+    margin-right: 30px;
+    width: 150px;
+}
+
+.policy-content {
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.policy-content ul {
+    list-style: none;
+    margin-top: 5px;
+}
+
+.policy-content ul li::before {
+    content: "• ";
+}
+
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .quality-policy-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .policy-title h3 {
+        border-right: none;
+        border-bottom: 2px solid white;
+        padding-right: 0;
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}
